@@ -3,6 +3,7 @@ package com.example.myworkedtime;
 import java.time.Duration;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 
 public class DayProfileClass{
     private int day;
@@ -15,7 +16,17 @@ public class DayProfileClass{
         this.endTime = endTime;
         this.workedHours = calculateWorkedTime(startTime, endTime);
     }
+    public void changeDayWorkedTime(String startTime, String endTime){
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.workedHours = calculateWorkedTime(startTime, endTime);
+    }
+
     private HoursClass calculateWorkedTime(String startTimeStr, String endTimeStr){
+        if (startTimeStr == null || endTimeStr == null || startTimeStr.isEmpty() || endTimeStr.isEmpty()) {
+            return new HoursClass(0, 0);
+        }
+
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
         LocalTime startTime = LocalTime.parse(startTimeStr, formatter);
         LocalTime endTime = LocalTime.parse(endTimeStr, formatter);
@@ -34,7 +45,24 @@ public class DayProfileClass{
         return new HoursClass(hours, minutes);
     }
 
+    //getters
+    public String getStartTime() {
+        return startTime;
+    }
+    public String getEndTime() {
+        return endTime;
+    }
+    public int getDay() {
+        return day;
+    }
     public HoursClass getWorkedHours() {
         return workedHours;
+    }
+    //setters
+    public void setStartTime(String startTime) {
+        this.startTime = startTime;
+    }
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
     }
 }

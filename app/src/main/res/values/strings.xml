@@ -1,3 +1,41 @@
 <resources>
-    <string name="app_name">My Worked Time</string>
+    <string name="app_name">Worked Time Manager</string>
+    <string name="label_MyRate">Rate</string>
+    <string name="label_MyTotalHours">Worked Time</string>
+    <string name="label_MySalary">Total Salary</string>
+    <string name="Button_AddHours">Add Hours</string>
+    <string name="label_AddTime">Hours</string>
+    <string name="label_ErrorText">all is good</string>
+    <string name="Language_Text">Language</string>
+    <string name="All_Worked_Time_Text">List of Worked Time</string> <!-- "all Worked Time: " -->
+    <string name="Dark_Theme_Text">Dark Theme</string>
+    <string name="Light_Theme_Text">Light Theme</string>
+    <string name="InputMode_Text">Input Hours:</string>
+    <string name="Settings_label">Settings</string>
+    <string name="Button_saveHours">save</string>
+    <string name="Button_cancelHours">cancel</string>
+    <!--    calendar_menu_dialog    -->
+    <string name="Label_startTime">start shift:</string>
+    <string name="Label_endTime">end shift:</string>
+    <string name="label_workedTimeThisDay">worked time:</string>
+    <string name="label_DeleteRecordDay">delete this day</string>
+    <string name="label_DeleteRecordMonth">delete all month</string>
+
+    <string-array name="month_names">
+        <item>january</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+    <!--    settings_dialog_layout    -->
+    <string name="label_ClearProfileButton">clear all worked time</string>
 </resources>
+
